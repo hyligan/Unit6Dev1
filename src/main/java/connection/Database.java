@@ -8,9 +8,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 public class Database {
-    public static final String DB_URL = "jdbc:postgresql://localhost:5432/task";
-    public static final String DB_USER = "myuser";
-    public static final String DB_PASSWORD= "mysecretpassword";
+    public static final String DB_URL = "jdbc:postgresql://35.238.176.199:5432/database_yan";
+    public static final String DB_USER = "dev12";
+    public static final String DB_PASSWORD= "dev12thebest";
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Database.class);
     private static Database instance;

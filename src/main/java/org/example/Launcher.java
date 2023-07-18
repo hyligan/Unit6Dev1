@@ -7,6 +7,8 @@ import org.flywaydb.core.internal.database.base.Database;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static connection.Database.*;
+
 public class Launcher {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Database.class);
@@ -14,7 +16,7 @@ public class Launcher {
     public static void main(String[] args) {
         Flyway flyway = Flyway
                 .configure()
-                .dataSource("jdbc:postgresql://35.238.176.199:5432/database_yan", "dev12", "dev12thebest")
+                .dataSource(DB_URL, DB_USER, DB_PASSWORD)
                 .load();
 
         flyway.migrate();
